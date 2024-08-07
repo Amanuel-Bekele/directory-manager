@@ -1,0 +1,29 @@
+{
+  "name": "directory-manager",
+  "version": "1.0.0",
+  "description": "A simple nodejs application that accepts CREATE, MOVE, LIST and DELETE commands to perform file operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Amanuel-Bekele/directory-manager.git"
+  },
+  "author": "Amanuel Bekele",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amanuel-Bekele/directory-manager/issues"
+  },
+  "homepage": "https://github.com/Amanuel-Bekele/directory-manager#readme",
+  "keywords": [],
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.9.0",
+    "prettier": "^3.3.3"
+  }
+}
