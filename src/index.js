@@ -15,3 +15,6 @@ rl.on('line', (input) => {
 
 logger.log('File System Simulator');
 logger.log('Enter commands (CREATE, LIST, DELETE, MOVE). Only one command at a time.');
+
+// Keep the program running
+setInterval(() => {}, 1000);
