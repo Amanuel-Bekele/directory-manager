@@ -9,6 +9,16 @@ const port = process.env.PORT || 3000;
 // Create a minimal HTTP server
 const server = http.createServer();
 
+// Respond to basic health check endpoint
+server.on('request', (req, res) => {
+  if (req.url === '/') {
+    // Health check endpoint
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.write('File System Simulator is running');
+    res.end();
+  }
+});
+
 server.on('error', (error) => {
   logger.logError(`ERR: Server error: ${error.message}`);
 });
