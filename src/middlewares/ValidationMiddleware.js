@@ -1,5 +1,5 @@
 const DirectoryUtils = require('../utils/DirectoryUtils');
-const Logger = require('../utils/logger');
+const Logger = require('../utils/Logger');
 
 const logger = new Logger();
 
