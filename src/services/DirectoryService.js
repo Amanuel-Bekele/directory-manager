@@ -56,6 +56,7 @@ class DirectoryService {
 
     if (!targetDir) {
       logger.logError('LIST_ERROR', path, 'No such directory');
+      return;
     }
 
     const output = DirectoryUtils.getDirectoryTree(targetDir);

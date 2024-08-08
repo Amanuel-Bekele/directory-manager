@@ -16,7 +16,7 @@ class Logger {
    * @param {string} reason - The reason for the error.
    */
   logError(type, path, reason) {
-    console.log('\x1b[31m%s\x1b[0m', `${type}, ${path}, ${reason}`);
+    console.log('\x1b[31m%s\x1b[0m', `${type}: ${path}:, ${reason}`);
   }
 }
 
