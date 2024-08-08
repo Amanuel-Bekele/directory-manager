@@ -1,7 +1,7 @@
 const readline = require('readline');
 const http = require('http');
 const processCommand = require('./app');
-const Logger = require('./utils/logger');
+const Logger = require('./utils/Logger');
 
 const logger = new Logger();
 const port = process.env.PORT || 3000;

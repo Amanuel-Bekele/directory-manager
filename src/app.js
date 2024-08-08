@@ -1,6 +1,6 @@
 const DirectoryService = require('./services/DirectoryService');
 const { validatePath } = require('./middlewares/ValidationMiddleware');
-const Logger = require('./utils/logger');
+const Logger = require('./utils/Logger');
 
 const ds = new DirectoryService();
 const logger = new Logger();

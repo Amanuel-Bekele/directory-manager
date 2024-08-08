@@ -1,2 +1,10 @@
 language = "nodejs"
-run = "bash deploy.sh"
+run = "npm install && npm run start"
+modules = ["nodejs-20", "bash"]
+
+[deployment]
+build = ["sh", "-c", "npm install"]
+run = ["sh", "-c", "npm run start"]
+
+[nix]
+channel = "stable-24_05"
