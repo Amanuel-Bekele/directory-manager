@@ -1,0 +1,13 @@
+name: Deploy to Replit
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Replit
+        run: |
+          curl -X POST https://api.replit.com/v1/repls/{REPL_ID}/pullAndRun \
+          -H "Authorization: Bearer ${{ secrets.REPLIT_TOKEN }}" \
+          -H "Content-Type: application/json"
