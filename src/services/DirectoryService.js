@@ -2,11 +2,10 @@ const Directory = require('../models/Directory');
 const DirectoryUtils = require('../utils/DirectoryUtils');
 const Logger = require('../utils/Logger');
 
-const logger = new Logger();
-
 class DirectoryService {
-  constructor() {
-    this.root = new Directory('/');
+  constructor(root = new Directory(''), logger = new Logger()) {
+    this.root = root;
+    this.logger = logger;
   }
 
   /**
@@ -31,14 +30,14 @@ class DirectoryService {
           current.children.set(part, new Directory(part));
           return;
         } else {
-          logger.logError('CREATE_ERROR', path, 'No such directory');
+          this.logger.logError('CREATE_ERROR', path, 'No such directory');
           return;
         }
       }
       current = current.children.get(part);
     }
 
-    logger.logError('CREATE_ERROR', path, 'Directory already exists');
+    this.logger.logError('CREATE_ERROR', path, 'Directory already exists');
   }
 
   /**
@@ -55,7 +54,7 @@ class DirectoryService {
     const targetDir = DirectoryUtils.traversePath(this.root, path);
 
     if (!targetDir) {
-      logger.logError('LIST_ERROR', path, 'No such directory');
+      this.logger.logError('LIST_ERROR', path, 'No such directory');
       return;
     }
 
@@ -78,7 +77,7 @@ class DirectoryService {
     const targetName = DirectoryUtils.getLastPartOfPath(path);
 
     if (!parent || !DirectoryUtils.checkIfDirectoryExists(parent, targetName)) {
-      logger.logError('DELETE_ERROR', path, 'No such directory');
+      this.logger.logError('DELETE_ERROR', path, 'No such directory');
       return;
     }
 
@@ -105,7 +104,7 @@ class DirectoryService {
 
     // Check if the source directory exists
     if (!sourceParent || !DirectoryUtils.checkIfDirectoryExists(sourceParent, sourceName)) {
-      logger.logError('MOVE_ERROR', `${sourcePath} ${destPath}`, 'No such directory');
+      this.logger.logError('MOVE_ERROR', `${sourcePath} ${destPath}`, 'No such directory');
       return;
     }
 
@@ -120,7 +119,7 @@ class DirectoryService {
       const destName = DirectoryUtils.getLastPartOfPath(destPath);
 
       if (!destParent) {
-        logger.logError('MOVE_ERROR', `${destPath}`, `No such directory`);
+        this.logger.logError('MOVE_ERROR', `${destPath}`, `No such directory`);
         return;
       }
 
@@ -133,7 +132,7 @@ class DirectoryService {
 
     // If destination exists, move into it as a subdirectory
     if (destDir.children.has(sourceName)) {
-      logger.logError('MOVE', `${sourcePath} ${destPath}`, 'Directory already exists');
+      this.logger.logError('MOVE', `${sourcePath} ${destPath}`, 'Directory already exists');
       return;
     }
 

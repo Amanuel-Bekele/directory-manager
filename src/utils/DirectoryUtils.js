@@ -8,7 +8,7 @@ class DirectoryUtils {
    * @returns {Directory|null} The final directory if found, null otherwise.
    */
   static traversePath(root, path) {
-    const parts = this.splitPath(path);
+    const parts = DirectoryUtils.splitPath(path);
 
     let current = root;
     for (const part of parts) {
@@ -52,7 +52,7 @@ class DirectoryUtils {
    * @returns {Directory|null} The parent directory if found, null otherwise.
    */
   static getParentDirectory(root, path) {
-    const parts = this.splitPath(path);
+    const parts = DirectoryUtils.splitPath(path);
     let current = root;
     let i = 0;
 
@@ -74,7 +74,7 @@ class DirectoryUtils {
    * @returns {string} The last part of the path.
    */
   static getLastPartOfPath(path) {
-    const parts = this.splitPath(path);
+    const parts = DirectoryUtils.splitPath(path);
     return parts[parts.length - 1];
   }
 
@@ -87,12 +87,12 @@ class DirectoryUtils {
    */
   static getDirectoryTree(directory, depth = 0) {
     const output = [];
-    const indent = '    '.repeat(depth);
+    const indent = ' '.repeat(depth);
     if (directory.name !== '') {
       output.push(`${indent}${directory.name}/`);
     }
     for (const child of directory.children.values()) {
-      output.push(...this.getDirectoryTree(child, depth + 1));
+      output.push(...DirectoryUtils.getDirectoryTree(child, depth + 1));
     }
     return output;
   }

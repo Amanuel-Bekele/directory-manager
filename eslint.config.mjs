@@ -11,6 +11,9 @@ export default [
       globals: globals.node,
       ecmaVersion: 12,
     },
+    // env: {
+    //   jest: true,
+    // },
     rules: {
       indent: ['error', 2], // Enforce 2-space indentation
       'max-len': ['error', { code: 120 }], // Set max line length to 120 characters

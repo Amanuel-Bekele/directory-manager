@@ -38,6 +38,8 @@ To start the Directory Manager, run:
 
 This will launch an interactive command-line interface where you can enter commands to manipulate the virtual directory structure.
 
+> **_NOTE:_**  The directory system comes with a root directory `/`.
+
 ## Commands
 
 - `CREATE <path>`: Create a new directory at the specified path.
@@ -46,7 +48,7 @@ This will launch an interactive command-line interface where you can enter comma
 - `DELETE <path>`: Delete the directory at the specified path.
 
 > :warning: Commands must be given one after another!
-> 
+>
 Example usage:
 
 ```
@@ -95,15 +97,15 @@ foods/
 ```
 
 ## Error_Handling
-* Trying to delete a directory that does not exist throws an error. For instance, from the above example, trying to delete `fruits/apples` will fail because there's no such directory `fruits/apples`. 
+* Trying to delete a directory that does not exist throws an error. For instance, from the above example, trying to delete `fruits/apples` will fail because there's no such directory `fruits/apples`.
 
-    
+
         DELETE fruits/apples
         DELETE_ERROR: fruits/apples: No such directory
 
 * Trying to CREATE a directory that already exists throws an error.
 
-    
+
     CREATE foods
     CREATE_ERROR: foods: Directory already exists
 
@@ -115,7 +117,7 @@ foods/
 
 * Trying to move a directory whose source or destination does not exist throws an error.
 
-    
+
     MOVE foods/vegetables foods/greens/vegetables
     MOVE_ERROR: foods/vegetables foods/greens/vegetables: No such directory
 
