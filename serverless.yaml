@@ -1,0 +1,21 @@
+service: directory-manager
+org: serverlesspockerapp
+app: directory-manager
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: ${opt:stage, 'prod'}
+  region: ${opt:region, 'us-east-1'}
+
+package:
+  exclude:
+    - node_modules/**
+    - .git/**
+    - .serverless/**
+    - .gitignore
+    - README.md
+
+functions:
+  app:
+    handler: src/index.js

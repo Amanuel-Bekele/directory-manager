@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "deploy": "serverless deploy"
   },
   "repository": {
     "type": "git",
