@@ -1,6 +1,6 @@
 const readline = require('readline');
 const processCommand = require('./app');
-const Logger = require('./utils/Logger');
+const Logger = require('./utils/logger');
 
 const logger = new Logger();
 

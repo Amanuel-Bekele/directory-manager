@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "node src/index.js",
-    "deploy": "serverless deploy"
+    "deploy": "git pull origin main && npm install && npm start"
   },
   "repository": {
     "type": "git",

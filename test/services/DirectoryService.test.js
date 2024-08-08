@@ -1,6 +1,6 @@
 const Directory = require('../../src/models/Directory');
 const DirectoryService = require('../../src/services/DirectoryService');
-const Logger = require('../../src/utils/Logger');
+const Logger = require('../../src/utils/logger');
 
 jest.mock('../../src/utils/Logger');
 

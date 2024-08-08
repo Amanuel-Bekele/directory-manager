@@ -1,6 +1,6 @@
 const Directory = require('../models/Directory');
 const DirectoryUtils = require('../utils/DirectoryUtils');
-const Logger = require('../utils/Logger');
+const Logger = require('../utils/logger');
 
 class DirectoryService {
   constructor(root = new Directory(''), logger = new Logger()) {
