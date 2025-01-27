@@ -1,0 +1,35 @@
+{
+    "Profiles": [{
+        "Name": "AI Dev",
+        "Guid": "ai-dev-profile",
+        "Normal Font": "FiraCodeNerdFontComplete-Regular 14",
+        "Use Non-ASCII Font": false,
+        "Horizontal Spacing": 1,
+        "Vertical Spacing": 1,
+        "Use Bold Font": true,
+        "Use Bright Bold": true,
+        "Use Italic Font": true,
+        "Ambiguous Double Width": false,
+        "Cursor Type": 2,
+        "Cursor Color": {
+            "Red Component": 0.51,
+            "Green Component": 0.51,
+            "Blue Component": 0.51
+        },
+        "Background Color": {
+            "Red Component": 0.046,
+            "Green Component": 0.046,
+            "Blue Component": 0.046
+        },
+        "Foreground Color": {
+            "Red Component": 0.86,
+            "Green Component": 0.86,
+            "Blue Component": 0.86
+        },
+        "Selection Color": {
+            "Red Component": 0.33,
+            "Green Component": 0.33,
+            "Blue Component": 0.33
+        }
+    }]
+}
