@@ -1,0 +1,58 @@
+{
+  "git.autofetch": true,
+  "jshint.options": {
+    "esversion": 6
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontFamily": "monospaced, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontWeight": "550",
+  "eslint.autoFixOnSave": true,
+  "eslint.enable": true,
+  "editor.formatOnSave": false,
+  "prettier.singleQuote": true,
+  "workbench.editor.enablePreview": false,
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
+  "workbench.startupEditor": "newUntitledFile",
+  "powermode.enabled": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "window.zoomLevel": 2,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "extensions.ignoreRecommendations": true,
+  "eslint.format.enable": true,
+  "files.autoSave": "onFocusChange",
+  "files.saveConflictResolution": "overwriteFileOnDisk",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": false
+  },
+  "gitlens.ai.experimental.model": "openai:gpt-4o",
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.colorTheme": "Xcode Classic (Dark)",
+  "[graphql]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.external.osxExec": "/Applications/Iterm.app",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "sonarlint.focusOnNewCode": true,
+  "debug.onTaskErrors": "showErrors",
+  "terminal.integrated.scrollback": 100000,
+  "terminal.integrated.persistentSessionScrollback": 10000,
+  "workbench.activityBar.location": "bottom",
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
+}
